@@ -1,5 +1,5 @@
 
-# HistoricalEarnings
+# HistoricalEarningsData
 
 This Python package allows users to query historical earnings report dates for various stock tickers. The dataset containing earnings information is bundled with the package, so no external downloads are required.
 
