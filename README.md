@@ -1,4 +1,3 @@
-
 # Historical Earnings Package
 
 This Python package allows users to query historical earnings report dates for various stock tickers. The dataset containing earnings information is bundled with the package, so no external downloads are required.
@@ -11,20 +10,18 @@ This Python package allows users to query historical earnings report dates for v
 
 ## Installation
 
-To install this package directly from GitHub, use:
+You can now install this package directly from PyPI using `pip`:
 
 ```bash
-pip install git+https://github.com/yourusername/historical_earnings_package.git
+pip install historical_earnings
 ```
-
-Replace `yourusername` with your GitHub username.
 
 ## Usage Example
 
 After installing the package, you can use the following example to query the earnings data:
 
 ```python
-from historical_earnings_package import load_earnings_data, get_earnings_dates
+from historical_earnings import load_earnings_data, get_earnings_dates
 
 # Load the earnings data from the included CSV file
 data = load_earnings_data()
