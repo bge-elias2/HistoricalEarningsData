@@ -10,7 +10,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        'historical_earnings_package': ['data/aggregated_earnings_data_webscraped.csv'],
+        'historical_earnings': ['data/aggregated_earnings_data_webscraped.csv'],  # Update package name here
     },
     install_requires=[
         'pandas',
