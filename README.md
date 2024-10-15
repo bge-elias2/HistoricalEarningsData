@@ -14,7 +14,7 @@ This Python package allows users to query historical earnings report dates for v
 You can now install this package directly from PyPI using `pip`:
 
 ```bash
-pip install HistoricalEarnings
+pip install HistoricalEarningsData
 ```
 
 ## Usage Example
@@ -22,7 +22,7 @@ pip install HistoricalEarnings
 After installing the package, you can use the following example to query the earnings data:
 
 ```python
-from HistoricalEarnings import load_earnings_data, get_earnings_dates
+from HistoricalEarningsData import load_earnings_data, get_earnings_dates
 
 # Load the earnings data from the included CSV file
 data = load_earnings_data()
