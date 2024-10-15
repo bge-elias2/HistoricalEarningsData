@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='HistoricalEarnings',  # New name with proper capitalization
+    name='HistoricalEarningsData',  # New name with proper capitalization
     version='0.4',  # Increment the version number
     description='A package to query historical earnings report dates for stock tickers',
     author='Your Name',
