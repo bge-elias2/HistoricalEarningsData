@@ -4,17 +4,18 @@ __pycache__/
 *.pyo
 .env/
 .vscode/
+venv/  # Ignore the virtual environment directory
 
 # Ignore build artifacts generated during packaging
 /build/
 /dist/
-/*.egg-info/
+*.egg-info/
 
 # Ignore test script (if it's not part of the final package)
 test_installed_package.py
 
 # Ignore CSV data if you prefer not to include it in the repository
-historical_earnings_package/data/*.csv
+historical_earnings/data/*.csv
 
 # Ignore logs and temporary files
 *.log

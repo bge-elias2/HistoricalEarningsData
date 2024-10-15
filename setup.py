@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='historical_earnings',  # The name of your package on PyPI
-    version='0.2',
+    name='HistoricalEarnings',  # New name with proper capitalization
+    version='0.4',  # Increment the version number
     description='A package to query historical earnings report dates for stock tickers',
     author='Your Name',
     author_email='your.email@example.com',
@@ -10,7 +10,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        'historical_earnings': ['data/aggregated_earnings_data_webscraped.csv'],  # Update package name here
+        'HistoricalEarnings': ['data/aggregated_earnings_data_webscraped.csv'],  # Use new name here
     },
     install_requires=[
         'pandas',
