@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='HistoricalEarningsData',  # Updated name
-    version='0.5',                   # Incremented version
+    version='0.1',                   # Incremented version
     description='A package to query historical earnings report dates for stock tickers',
     author='Your Name',
     author_email='your.email@example.com',
