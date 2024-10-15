@@ -7,7 +7,10 @@ setup(
     author='Your Name',
     author_email='your.email@example.com',
     packages=find_packages(),
-    include_package_data=True,
+    include_package_data=True,  # Include non-code files (like CSV)
+    package_data={
+        'historical_earnings_package': ['data/aggregated_earnings_data_webscraped.csv'],  # Specify the CSV file
+    },
     install_requires=[
         'pandas',
     ],

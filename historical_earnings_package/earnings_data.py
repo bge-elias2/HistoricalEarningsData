@@ -1,8 +1,11 @@
 import pandas as pd
 from datetime import datetime
+import os
 
-def load_earnings_data(file_path: str):
-    """Load the earnings data from a CSV file."""
+def load_earnings_data():
+    """Load the earnings data from the CSV file included in the package."""
+    # Get the path to the CSV file inside the installed package
+    file_path = os.path.join(os.path.dirname(__file__), 'data', 'aggregated_earnings_data_webscraped.csv')
     return pd.read_csv(file_path)
 
 def get_earnings_dates(ticker: str, start_date: str, end_date: str, data: pd.DataFrame):
