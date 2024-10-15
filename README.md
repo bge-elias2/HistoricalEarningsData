@@ -1,27 +1,58 @@
+
 # Historical Earnings Package
 
-This package allows you to query historical earnings report dates for stock tickers over a specified time range.
+This Python package allows users to query historical earnings report dates for various stock tickers. The dataset containing earnings information is bundled with the package, so no external downloads are required.
+
+## Features
+
+- Easily pull historical earnings data for popular stock tickers.
+- Filter earnings data by date range.
+- No need to download any datasets separately — all data is included with the package.
 
 ## Installation
 
-1. Clone the repository:
-    ```
-    git clone https://github.com/yourusername/historical_earnings_package.git
-    ```
+To install this package directly from GitHub, use:
 
-2. Install the package:
-    ```
-    pip install .
-    ```
+```bash
+pip install git+https://github.com/yourusername/historical_earnings_package.git
+```
 
-## Usage
+Replace `yourusername` with your GitHub username.
+
+## Usage Example
+
+After installing the package, you can use the following example to query the earnings data:
 
 ```python
 from historical_earnings_package import load_earnings_data, get_earnings_dates
 
-# Load the earnings data from a CSV file
-data = load_earnings_data('path/to/your/data/aggregated_earnings_data_webscraped.csv')
+# Load the earnings data from the included CSV file
+data = load_earnings_data()
 
-# Query earnings for AAPL between 2020 and 2021
+# Query earnings for AAPL between 2020-01-01 and 2021-12-31
 earnings = get_earnings_dates('AAPL', '2020-01-01', '2021-12-31', data)
+
+# Print the result
 print(earnings)
+```
+
+### Data Included
+
+The dataset included with this package contains the following columns:
+
+- **symbol**: The stock ticker symbol (e.g., `AAPL` for Apple).
+- **earnings_date**: The date of the earnings report.
+- **eps_estimate**: Estimated earnings per share (EPS) before the earnings report.
+- **reported_eps**: The actual reported EPS.
+- **surprise**: The difference between the estimated and actual EPS (surprise).
+
+The dataset is automatically loaded when you call `load_earnings_data()`.
+
+### Requirements
+
+This package has the following dependency:
+- **pandas**: Used for handling data. This will be installed automatically with the package.
+
+### License
+
+This project is licensed under the MIT License.
