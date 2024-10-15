@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='historical_earnings',  # The name of your package on PyPI
-    version='0.1',
+    version='0.2',
     description='A package to query historical earnings report dates for stock tickers',
     author='Your Name',
     author_email='your.email@example.com',
