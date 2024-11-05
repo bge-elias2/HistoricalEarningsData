@@ -1,16 +1,17 @@
+
 import pandas as pd
 from datetime import datetime
 import os
 
 def load_earnings_data():
     """Load the earnings data from the CSV file included in the package."""
-    # Get the path to the CSV file inside the installed package
-    file_path = os.path.join(os.path.dirname(__file__), 'data', 'aggregated_earnings_data_webscraped.csv')
+    # Get the path to the new CSV file with implied volatility data
+    file_path = os.path.join(os.path.dirname(__file__), 'data', 'aggregated_earnings_data_with_iv.csv')
     return pd.read_csv(file_path)
 
 def get_earnings_dates(ticker: str, start_date: str, end_date: str, data: pd.DataFrame):
     """
-    Query earnings report dates for a given stock ticker and date range.
+    Query earnings report dates and implied volatility for a given stock ticker and date range.
 
     Parameters:
     - ticker (str): Stock ticker (e.g., 'AAPL').
@@ -33,4 +34,4 @@ def get_earnings_dates(ticker: str, start_date: str, end_date: str, data: pd.Dat
                          (data['earnings_date'] >= start_date) &
                          (data['earnings_date'] <= end_date)]
 
-    return filtered_data[['symbol', 'earnings_date', 'eps_estimate', 'reported_eps', 'surprise']]
+    return filtered_data[['symbol', 'earnings_date', 'eps_estimate', 'reported_eps', 'surprise', 'implied_volatility']]
